@@ -64,8 +64,8 @@ JST SH style connector, 1.0mm Pitch, 4 Position
 | 2 | 5v | Power | |
 | 3 | EN | ESP32-C3 Enable | EN |
 | 4 | Boot | ESP32-C3 Bootloader | IO9 |
-| 5 | RXDO | Serial UART Receive | RXDO |
-| 6 | TXDO | Serial UART Transmit | TXDO |
+| 5 | RXDO | Serial UART Receive | RXDO (IO20) |
+| 6 | TXDO | Serial UART Transmit | TXDO (IO21) |
 | 7 | PS-EN | LDO39050 Enable | Input (Active HIGH) |
 | 8 | PD-EN | Presence Detection Enable | IO5 as Input (Active HIGH) |
 
