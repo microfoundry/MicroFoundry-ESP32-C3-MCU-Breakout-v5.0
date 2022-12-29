@@ -20,58 +20,58 @@ Runs [Arduino with Espressif's ESP32 core](https://github.com/espressif/arduino-
 ### Power/IO
 JST SH style connector, 1.0mm Pitch, 6 Position
 
-| Pin | Function | Description | ESP32-C3 IO |
-| --- | -------- | ----------- | ---------- |
-| 1 | GND | Ground | |
-| 2 | Vin | Voltage In 3.5 to 5.5vdc | |
-| 3 | EN | ESP32-C3 Enable | EN (Pull LOW to reset) |
-| 4 | PS-EN | LDO39050 Enable | Input (Active HIGH) |
-| 5 | PD-EN | Presence Detection Enable | IO5 as Input (Active HIGH) |
-| 6 | PD-Out |Presence Detected | IO4 as Output (Active HIGH) |
+| Pin | ESP32-C3 IO | Function | Description | Pin Settings Requirements |
+| --- | ----------- | -------- | ----------- | -------------------------- |
+| 1 |     | GND | Ground | |
+| 2 |     | Vin | Voltage In 3.5 to 5.5vdc | |
+| 3 | EN  | ESP32-C3 Enable | Run / Reset | Pull LOW to reset, pull-up resistor in-circuit |
+| 4 |     | PS-EN | LDO39050 Enable | Input (Active HIGH, pull-down resistor in-circuit) |
+| 5 | IO5 | PD-EN | Presence Detection Enable | Input (User defined) |
+| 6 | IO4 | PD-Out | Presence Detected | Output (User defined) |
 
 ### FFC Expansion Connector
-10 position 1.0mm pitch FFC connector providing 3.3v regulated power, I2C and 6 additional IO
+10 position 1.0mm pitch FFC connector providing 3.3v regulated power, I2C and 6 additional IO as designed for use with ToF Sensor
 
-| Pin | Function | Description | ESP32-C3 IO |
-| --- | -------- | ----------- | ---------- |
-| 1 | 3v3 | Sensor Power | |
-| 2 | GND | Ground | |
-| 3 | SDA | I2C Data | IO2 |
-| 4 | SCL | I2C Clock | IO3 |
-| 5 | VL53-PWR | High Side Power Switch (on VL53 breakout) | IO7 as Output (Active HIGH) |
-| 6 | VL53-Int | VL53L5 Interrupt | IO9 as Input (Active LOW) |
-| 7 | VL53-I2C-RST | VL53L5 I2C Reset | IO6 as Output (Active HIGH) |
-| 8 | VL53-LPn | VL53L5 Low Power Enable | IO8 as Output (Active LOW) |
-| 9 | PD-LED1 | NO Presence Detection Indicator | IO0 as Output (Active HIGH) |
-| 10 | PD-LED2 | Presence Detected Indicator | IO10 as Output (Active HIGH) |
+| Pin | ESP32-C3 IO | Function | Description | Pin Settings Requirements |
+| --- | ----------- | -------- | ----------- | -------------------------- |
+| 1   |      | 3v3 | Sensor Power |
+| 2   |      | GND | Ground | |
+| 3   | IO2  | SDA | I2C Data |
+| 4   | IO3  | SCL | I2C Clock |
+| 5   | IO7  | VL53-PWR | High Side Power Switch (on VL53 breakout) | as Output (Active HIGH) |
+| 6   | IO9  | VL53-Int | VL53L5 Interrupt | as Input (Active LOW) |
+| 7   | IO6  | VL53-I2C-RST | VL53L5 I2C Reset | as Output (Active HIGH) |
+| 8   | IO8  | VL53-LPn | VL53L5 Low Power Enable |as Output (Active LOW) |
+| 9   | IO0  | PD-LED1 | NO Presence Detection Indicator | as Output (Active HIGH) |
+| 10  | IO10 | PD-LED2 | Presence Detected Indicator | as Output (Active HIGH) |
 
 ### STEMMA QT / Qwiic
 JST SH style connector, 1.0mm Pitch, 4 Position
 
-| Pin | Function | Description | ESP32-C3 IO |
-| --- | -------- | ----------- | ---------- |
-| 1 | GND | Ground | |
-| 2 | 3v3 | Voltage Out | |
-| 3 | SDA | I2C Data | IO2 |
-| 4 | SCL | I2C Clock | IO3 |
+| Pin | ESP32-C3 IO | Function | Description |
+| --- | ----------- | -------- | ----------- |
+| 1 |  | GND | Ground |
+| 2 |  | 3v3 | Voltage Out |
+| 3 | IO2 | SDA | I2C Data |
+| 4 | IO3 | SCL | I2C Clock |
 
 ### Program/Debug Contact Pads
 [Kyocera AVX 009258008004064](http://datasheet.octopart.com/009258008004064-KYOCERA-AVX-datasheet-165279551.pdf), 1.0mm Pitch 8 Position single piece connector. An optional programming adapter is available.
 
-| Pin | Function | Description | ESP32-C3 IO |
-| --- | -------- | ----------- | ---------- |
-| 1 | GND | Ground | |
-| 2 | 5v | Power | |
-| 3 | EN | ESP32-C3 Enable | EN |
-| 4 | Boot | ESP32-C3 Bootloader | IO9 |
-| 5 | RXDO | Serial UART Receive | RXDO (IO20) |
-| 6 | TXDO | Serial UART Transmit | TXDO (IO21) |
-| 7 | PS-EN | LDO39050 Enable | Input (Active HIGH, pull-down resistor in-circuit) |
-| 8 | PD-EN | Presence Detection Enable | IO5 as Input (Active HIGH) |
+| Pin | ESP32-C3 IO | Function | Description | Pin Settings Requirements |
+| --- | ----------- | -------- | ----------- | -------------------------- |
+| 1 |  | GND | Ground | |
+| 2 |  | 5v | Power | 3.5 -5.5vdc |
+| 3 | EN | ESP32-C3 Enable | Active LOW to Reset ESP32-C3 |
+| 4 | IO9 | Boot | ESP32-C3 Bootloader | Active LOW during Reset to enter Bootloader |
+| 5 | IO20 | RXDO | Serial UART Receive | |
+| 6 | IO21 | TXDO | Serial UART Transmit | |
+| 7 |  | PS-EN | LDO39050 Enable | Input (Active HIGH = EN, pull-down resistor in-circuit) |
+| 8 | IO5 | PD-EN | Presence Detection Enable | As Input (User defined) |
 
 ### ESP32-C3 Pins Used Internally
 
-| ESP32-C3 IO | Function | Description | Port Settings Requirements |
+| ESP32-C3 IO | Function | Description | Pin Settings Requirements |
 | ----------- | -------- | ----------- | -------------------------- |
 | IO1 | SEC_EN | OPTIGA Trust-M Enable | Output (Active HIGH=EN, pull-up resistor in-circuit) |
 | IO18 | PG | Power Good signal from LD39050 | Input (HIGH when good, pull-up resistor in-circuit) |
