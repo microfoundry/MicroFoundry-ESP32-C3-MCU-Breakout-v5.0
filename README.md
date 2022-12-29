@@ -56,7 +56,7 @@ JST SH style connector, 1.0mm Pitch, 4 Position
 | 4 | SCL | I2C Clock | IO3 |
 
 ### Program/Debug Contact Pads
-[Kyocera AVX 009258008004064](http://datasheet.octopart.com/009258008004064-KYOCERA-AVX-datasheet-165279551.pdf), 1.0mm Pitch 8 Position single piece connector
+[Kyocera AVX 009258008004064](http://datasheet.octopart.com/009258008004064-KYOCERA-AVX-datasheet-165279551.pdf), 1.0mm Pitch 8 Position single piece connector. An optional programming adapter is available.
 
 | Pin | Function | Description | ESP32-C3 IO |
 | --- | -------- | ----------- | ---------- |
