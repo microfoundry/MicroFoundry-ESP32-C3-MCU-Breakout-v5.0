@@ -66,13 +66,14 @@ JST SH style connector, 1.0mm Pitch, 4 Position
 | 4 | Boot | ESP32-C3 Bootloader | IO9 |
 | 5 | RXDO | Serial UART Receive | RXDO (IO20) |
 | 6 | TXDO | Serial UART Transmit | TXDO (IO21) |
-| 7 | PS-EN | LDO39050 Enable | Input (Active HIGH) |
+| 7 | PS-EN | LDO39050 Enable | Input (Active HIGH, pull-down resistor in-circuit) |
 | 8 | PD-EN | Presence Detection Enable | IO5 as Input (Active HIGH) |
 
-### ESP32-C3 Pins Not Exposed
+### ESP32-C3 Pins Used Internally
 
-| Pin | Function | Description | ESP32-C3 IO |
-| --- | -------- | ----------- | ---------- |
-| 1 | LED | ESP32-C2 Blue User Indicator | IO19 (Active LOW) |
-| 2 | SEC_EN | OPTIGA Trust-M Enable | IO1 (Active HIGH) |
+| ESP32-C3 IO | Function | Description | Port Settings Requirements |
+| ----------- | -------- | ----------- | -------------------------- |
+| IO1 | SEC_EN | OPTIGA Trust-M Enable | Output (Active HIGH=EN, pull-up resistor in-circuit) |
+| IO18 | PG | Power Good signal from LD39050 | Input (HIGH when good, pull-up resistor in-circuit) |
+| IO19 | LED | ESP32-C2 Blue User Indicator | Output (Active HIGH = ON) |
 
