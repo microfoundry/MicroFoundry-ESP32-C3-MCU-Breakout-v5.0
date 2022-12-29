@@ -45,6 +45,8 @@ JST SH style connector, 1.0mm Pitch, 6 Position
 | 9   | IO0  | PD-LED1 | NO Presence Detection Indicator | as Output (Active HIGH) |
 | 10  | IO10 | PD-LED2 | Presence Detected Indicator | as Output (Active HIGH) |
 
+**NOTE** Pin settings requirements are relative to intended use. 
+
 ### STEMMA QT / Qwiic
 JST SH style connector, 1.0mm Pitch, 4 Position
 
