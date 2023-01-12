@@ -58,7 +58,7 @@ JST SH style connector, 1.0mm Pitch, 4 Position
 | 4 | IO3 | SCL | I2C Clock |
 
 ### Program/Debug Contact Pads
-[Kyocera AVX 009258008004064](http://datasheet.octopart.com/009258008004064-KYOCERA-AVX-datasheet-165279551.pdf), 1.0mm Pitch 8 Position single piece connector. An optional programming adapter is available. The programming adapter is pin compatible with Espressif's [ESP-Prog](https://docs.espressif.com/projects/espressif-esp-dev-kits/en/latest/other/esp-prog/user_guide.html) and has the necessary signal to enable the LDO39050. It is recommended to set the ESP-Prog at 5v.
+[Kyocera AVX 009258008004064](http://datasheet.octopart.com/009258008004064-KYOCERA-AVX-datasheet-165279551.pdf), 1.0mm Pitch 8 Position single piece connector. An optional programming adapter is available, is pin compatible with Espressif's [ESP-Prog](https://docs.espressif.com/projects/espressif-esp-dev-kits/en/latest/other/esp-prog/user_guide.html) and has the necessary signal to enable the LDO39050. It is recommended to set the ESP-Prog at 5v.
 
 | Pin | ESP32-C3 IO | Function | Description | Pin Settings Requirements |
 | --- | ----------- | -------- | ----------- | -------------------------- |
