@@ -78,5 +78,5 @@ NOTE: ESP-Prog is available from [Digi-Key](https://www.digikey.com/en/products/
 | ----------- | -------- | ----------- | -------------------------- |
 | IO1 | SEC_EN | OPTIGA Trust-M Enable | Output (Active HIGH=EN, pull-up resistor in-circuit) |
 | IO18 | PG | Power Good signal from LD39050 | Input (HIGH when good, pull-up resistor in-circuit) |
-| IO19 | LED | ESP32-C2 Blue User Indicator | Output (Active HIGH = ON) |
+| IO19 | LED | ESP32-C3 Blue User Indicator | Output (Active HIGH = ON) |
 
